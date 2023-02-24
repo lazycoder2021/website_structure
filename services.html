@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title></title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .logo {
+            font-size: 16px;
+        }
+
+        .col-md-12 {
+            border: 1px solid black;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 4px;
+        }
+
+        .menu-icon {
+            font-size: 20px;
+            display: none;
+        }
+
+
+        ul li {
+            list-style-type: none;
+            display: inline-block;
+            font-size: 16px;
+            padding: 0px 10px;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        @media only screen and (max-width:500px) {
+            .menu-icon {
+                display: block;
+                cursor: pointer;
+            }
+
+            ul {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+                flex-direction: column;
+                border: 1px solid black;
+                padding: 20px 0px;
+            }
+
+                .mobile-menu li {
+                    padding: 20px 0px;
+                    text-align: center;
+                }
+
+            .hide {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="logo"><a href="index.html">LOGO</a></div>
+            <span class="glyphicon glyphicon-menu-hamburger menu-icon"></span>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <ul class="mobile-menu hide">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <h2 style="margin-top:200px;text-transform:uppercase;"><center>This is services page</center></h2>
+    </div>
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function () {
+            document.querySelector('.mobile-menu').classList.toggle('hide');
+        })
+    </script>
+</body>
+</html>
